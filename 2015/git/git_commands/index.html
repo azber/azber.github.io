@@ -2,6 +2,8 @@
 <html class="theme-next use-motion theme-next-mist">
 <head>
   
+    
+
 
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -37,15 +39,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Azber's blog">
-<meta property="og:url" content="http://www.azber.com/index.html">
+<meta name="description" content="创建和使用git ssh key首先设置git的user name和email：12git config --global user.name &quot;xxx&quot;git config --global user.email &quot;xxx@gmail.com&quot;
+查看git配置：1git config --list
+生成SHH密匙：查看是否已经有了ssh密钥：1cd ~/.ssh
+如果没有密钥则不会有此文件夹，有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用git命令">
+<meta property="og:url" content="http://www.azber.com/2015/git/git_commands/index.html">
 <meta property="og:site_name" content="Azber's blog">
-<meta property="og:description">
+<meta property="og:description" content="创建和使用git ssh key首先设置git的user name和email：12git config --global user.name &quot;xxx&quot;git config --global user.email &quot;xxx@gmail.com&quot;
+查看git配置：1git config --list
+生成SHH密匙：查看是否已经有了ssh密钥：1cd ~/.ssh
+如果没有密钥则不会有此文件夹，有">
+<meta property="og:updated_time" content="2015-09-01T15:49:19.137Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Azber's blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="常用git命令">
+<meta name="twitter:description" content="创建和使用git ssh key首先设置git的user name和email：12git config --global user.name &quot;xxx&quot;git config --global user.email &quot;xxx@gmail.com&quot;
+查看git配置：1git config --list
+生成SHH密匙：查看是否已经有了ssh密钥：1cd ~/.ssh
+如果没有密钥则不会有此文件夹，有">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -55,7 +67,7 @@
   };
 </script>
 
-  <title> Azber's blog </title>
+  <title> 常用git命令 | Azber's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -73,9 +85,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -143,9 +153,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -156,9 +166,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/git/git_commands/" itemprop="url">
-                常用git命令
-              </a>
+              常用git命令
             
           
         </h1>
@@ -186,8 +194,7 @@
       
 
       
-        
-          <span itemprop="articleBody"><h5 id="创建和使用git_ssh_key">创建和使用git ssh key</h5><p>首先设置git的user name和email：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span></span><br><span class="line">git config --global user.email <span class="string">"xxx@gmail.com"</span></span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h5 id="创建和使用git_ssh_key">创建和使用git ssh key</h5><p>首先设置git的user name和email：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span></span><br><span class="line">git config --global user.email <span class="string">"xxx@gmail.com"</span></span><br></pre></td></tr></table></figure></p>
 <p>查看git配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></p>
 <h5 id="生成SHH密匙：">生成SHH密匙：</h5><p>查看是否已经有了ssh密钥：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure></p>
 <p>如果没有密钥则不会有此文件夹，有则备份删除<br>生存密钥：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"xxx@gmail.com"</span></span><br></pre></td></tr></table></figure></p>
@@ -259,7 +266,6 @@
 <p>首先key-keygen 生成密钥</p>
 <p>然后把生成的密钥复制到git中自己的账号下的相应位置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push ssh:</span><br></pre></td></tr></table></figure></p>
 </span>
-        
       
     </div>
 
@@ -267,420 +273,39 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/git/Getting_Started/About_Version_Control/" rel="next"></a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/git/Getting_Started/About_Version_Control/" itemprop="url">
-                未命名
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-09-01T23:24:56+08:00" content="2015-09-01">
-            2015-09-01
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"></span>
-        
+    <div class="post-spread">
       
     </div>
+  </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/git/git_directory/" itemprop="url">
-                git-scm
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-09-01T23:20:10+08:00" content="2015-09-01">
-            2015-09-01
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="Book">Book</h1><p>The entire Pro Git book, written by Scott Chacon and Ben Straub and published by Apress, is available here.All content is licensed under the Creative Commons Attribution Non Commercial Share Alike  * 3.0 license.Print versions of the book are available on Amazon.com.</p>
-<ul>
-<li>1.起步<ul>
-<li>1.1 关于版本控制</li>
-<li>1.2 Git 简史</li>
-<li>1.3 Git 基础</li>
-<li>1.4 命令行</li>
-<li>1.5 安装 Git</li>
-<li>1.6 初次运行 Git 前的配置</li>
-<li>1.7 获取帮助</li>
-<li>1.8 总结</li>
-</ul>
-</li>
-<li>2.Git 基础<ul>
-<li>2.1 获取 Git 仓库</li>
-<li>2.2 记录每次更新到仓库</li>
-<li>2.3 查看提交历史</li>
-<li>2.4 撤消操作</li>
-<li>2.5 远程仓库的使用</li>
-<li>2.6 打标签</li>
-<li>2.7 Git 别名</li>
-<li>2.8 总结</li>
-</ul>
-</li>
-<li>3.Git 分支<ul>
-<li>3.1 分支简介</li>
-<li>3.2 分支的新建与合并</li>
-<li>3.3 分支管理</li>
-<li>3.4 分支开发工作流</li>
-<li>3.5 远程分支</li>
-<li>3.6 变基</li>
-<li>3.7 总结</li>
-</ul>
-</li>
-<li>4.服务器上的 Git<ul>
-<li>4.1 协议</li>
-<li>4.2 在服务器上搭建 Git</li>
-<li>4.3 生成 SSH 公钥</li>
-<li>4.4 配置服务器</li>
-<li>4.5 Git 守护进程</li>
-<li>4.6 Smart HTTP</li>
-<li>4.7 GitWeb</li>
-<li>4.8 GitLab</li>
-<li>4.9 第三方托管的选择</li>
-<li>4.10 总结</li>
-</ul>
-</li>
-<li>5.分布式 Git<ul>
-<li>5.1 分布式工作流程</li>
-<li>5.2 向一个项目贡献</li>
-<li>5.3 维护项目</li>
-<li>5.4 总结</li>
-<li>6.GitHub</li>
-<li>6.1 账户的创建和配置</li>
-<li>6.2 对项目做出贡献</li>
-<li>6.3 维护项目</li>
-<li>6.4 管理组织</li>
-<li>6.5 脚本 GitHub</li>
-<li>6.6 总结</li>
-<li>7.Git 工具</li>
-<li>7.1 选择修订版本</li>
-<li>7.2 交互式暂存</li>
-<li>7.3 储藏与清理</li>
-<li>7.4 签署工作</li>
-<li>7.5 搜索</li>
-<li>7.6 重写历史</li>
-<li>7.7 重置揭密</li>
-<li>7.8 高级合并</li>
-<li>7.9 Rerere</li>
-<li>7.10 使用 Git 调试</li>
-<li>7.11 子模块</li>
-<li>7.12 打包</li>
-<li>7.13 替换</li>
-<li>7.14 凭证存储</li>
-<li>7.15 总结</li>
-</ul>
-</li>
-<li>8.自定义 Git<ul>
-<li>8.1 配置 Git</li>
-<li>8.2 Git 属性</li>
-<li>8.3 Git 钩子</li>
-<li>8.4 使用强制策略的一个例子</li>
-<li>8.5 总结</li>
-</ul>
-</li>
-<li>9.Git 与其他系统<ul>
-<li>9.1 作为客户端的 Git</li>
-<li>9.2 迁移到 Git</li>
-<li>9.3 总结</li>
-</ul>
-</li>
-<li>10.Git 内部原理<ul>
-<li>10.1 底层命令和高层命令</li>
-<li>10.2 Git 对象</li>
-<li>10.3 Git 引用</li>
-<li>10.4 包文件</li>
-<li>10.5 引用规格</li>
-<li>10.6 传输协议</li>
-<li>10.7 维护与数据恢复</li>
-<li>10.8 环境变量</li>
-<li>10.9 总结</li>
-</ul>
-</li>
-<li>A1.其它环境中的 Git<ul>
-<li>A1.1 图形界面</li>
-<li>A1.2 Visual Studio 中的 Git</li>
-<li>A1.3 Eclipse 中的 Git</li>
-<li>A1.4 Bash 中的 Git</li>
-<li>A1.5 Zsh 中的 Git</li>
-<li>A1.6 Powershell 中的 Git</li>
-<li>A1.7 总结</li>
-</ul>
-</li>
-<li>A2.将 Git 嵌入你的应用<ul>
-<li>A2.1 命令行 Git 方式</li>
-<li>A2.2 Libgit2</li>
-<li>A2.3 JGit</li>
-</ul>
-</li>
-<li>A3.Git 命令<ul>
-<li>A3.1 设置与配置</li>
-<li>A3.2 获取与创建项目</li>
-<li>A3.3 快照基础</li>
-<li>A3.4 分支与合并</li>
-<li>A3.5 项目分享与更新</li>
-<li>A3.6 检查与比较</li>
-<li>A3.7 调试</li>
-<li>A3.8 补丁</li>
-<li>A3.9 邮件</li>
-<li>A3.10 外部系统</li>
-<li>A3.11 管理</li>
-<li>A3.12 底层命令</li>
-</ul>
-</li>
-</ul>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/hexo-guide-1/" itemprop="url">
-                hexo系列教程：（一）hexo介绍
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-09-01T22:50:36+08:00" content="2015-09-01">
-            2015-09-01
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h1 id="hexo系列教程：（一）hexo介绍">hexo系列教程：（一）hexo介绍</h1><h2 id="什么是hexo">什么是hexo</h2><p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的@tommy351。引用@tommy351的话，hexo：</p>
-<blockquote>
-<p><br>快速、简单且功能强大的 Node.js 博客框架。<br><br>A fast, simple &amp; powerful blog framework, powered by Node.js.<br><br></p>
-</blockquote>
-<p>类似于jekyll、Octopress、Wordpress，我们可以用<a href="http://zespia.tw/hexo/zh-CN/" target="_blank" rel="external">hexo</a>创建自己的博客，托管到github或Heroku上，绑定自己的域名，用markdown写文章。<a href="http://www.azber.com">本博客</a>即使用hexo创建并托管在github上。</p>
-<h2 id="为什么要用hexo">为什么要用hexo</h2><p>还是引用下作者的话：</p>
-<blockquote>
-<p><br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持 Markdown<br>仅需一道指令即可部署到 GitHub Pages 和 Heroku<br>已移植 Octopress 插件<br>高扩展性、自订性<br>兼容于 Windows, Mac &amp; Linux<br><br></p>
-</blockquote>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/hello-world/" itemprop="url">
-                Hello World
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-09-01T22:48:18+08:00" content="2015-09-01">
-            2015-09-01
-          </time>
-        </span>
-
-        
-
-        
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+          </div>
         
       </div>
 
@@ -697,6 +322,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -751,6 +385,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建和使用git_ssh_key"><span class="nav-number">1.</span> <span class="nav-text">创建和使用git ssh key</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#生成SHH密匙："><span class="nav-number">2.</span> <span class="nav-text">生成SHH密匙：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git变更项目地址"><span class="nav-number">3.</span> <span class="nav-text">git变更项目地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看某个文件的修改历史"><span class="nav-number">4.</span> <span class="nav-text">查看某个文件的修改历史</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git_push_时报错_warning:_push-default_is_unset;"><span class="nav-number">5.</span> <span class="nav-text">git push 时报错 warning: push.default is unset;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git_submodule的使用拉子项目代码"><span class="nav-number">6.</span> <span class="nav-text">git submodule的使用拉子项目代码</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-添加"><span class="nav-number">6.1.</span> <span class="nav-text">1.添加</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-删除"><span class="nav-number">6.2.</span> <span class="nav-text">2.删除</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git_add文件取消"><span class="nav-number">7.</span> <span class="nav-text">git add文件取消</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git删除文件："><span class="nav-number">8.</span> <span class="nav-text">git删除文件：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#版本回退"><span class="nav-number">9.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#历史版本对比"><span class="nav-number">10.</span> <span class="nav-text">历史版本对比</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分支的意义与管理"><span class="nav-number">11.</span> <span class="nav-text">分支的意义与管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git冲突文件编辑"><span class="nav-number">12.</span> <span class="nav-text">git冲突文件编辑</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不顺利的代码提交流程"><span class="nav-number">13.</span> <span class="nav-text">不顺利的代码提交流程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git顺利的提交代码流程"><span class="nav-number">14.</span> <span class="nav-text">git顺利的提交代码流程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#理解github的pull_request"><span class="nav-number">15.</span> <span class="nav-text">理解github的pull request</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一些错误处理"><span class="nav-number">16.</span> <span class="nav-text">一些错误处理</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
       
 
     </div>
@@ -820,6 +465,165 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {

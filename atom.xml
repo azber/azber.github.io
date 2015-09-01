@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.azber.com/"/>
-  <updated>2015-08-31T15:59:31.085Z</updated>
+  <updated>2015-09-01T15:49:19.137Z</updated>
   <id>http://www.azber.com/</id>
   
   <author>
@@ -15,61 +15,268 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Awesome-Networking]]></title>
-    <link href="http://www.azber.com/2015/Awesome-Networking/"/>
-    <id>http://www.azber.com/2015/Awesome-Networking/</id>
-    <published>2015-08-31T15:57:56.000Z</published>
-    <updated>2015-08-31T15:59:31.085Z</updated>
-    <content type="html"><![CDATA[<h1 id="Awesome_Networking">Awesome Networking</h1><p>A curated list of awesome networking libraries, resources and shiny things.</p>
-<ul>
-<li><p>HTTP</p>
-<ul>
-<li><a href="http://shop.oreilly.com/product/9781565925090.do" target="_blank" rel="external">HTTP: The Definitive Guide</a></li>
-<li><a href="https://www.ietf.org/rfc/rfc2616.txt" target="_blank" rel="external">HTTP/1.1</a></li>
-<li><a href="https://tools.ietf.org/html/draft-ietf-httpbis-http2-16" target="_blank" rel="external">HTTP/2 draft</a></li>
-</ul>
-</li>
-<li><p>TCP/IP</p>
-<ul>
-<li><a href="https://www.google.com/search?q=TCP%2FIP+Illustrated&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;gws_rd=ssl" target="_blank" rel="external">TCP/IP Illustrated</a></li>
-<li><a href="http://www.tcpdump.org/tcpdump_man.html" target="_blank" rel="external">tcpdump</a></li>
-<li><a href="http://beej.us/guide/bgnet/output/html/multipage/index.html" target="_blank" rel="external">Beej’s Guide to Network Programming</a></li>
-<li><a href="http://www.kegel.com/c10k.html" target="_blank" rel="external">The C10K problem</a></li>
-<li><a href="https://github.com/tornadoweb/tornado/blob/master/tornado/ioloop.py" target="_blank" rel="external">Tornado</a></li>
-<li><a href="https://github.com/torvalds/linux/tree/master/net/ipv4" target="_blank" rel="external">Linux source code</a></li>
-<li><a href="http://www.mathcs.emory.edu/~cheung/Courses/558/Syllabus/Papers/TCP-Hybla.pdf" target="_blank" rel="external">TCP Hybla</a></li>
-</ul>
-</li>
-<li><p>DNS</p>
-<ul>
-<li><a href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank" rel="external">DNS</a></li>
-</ul>
-</li>
-<li><p>Protocols and APIs</p>
-<ul>
-<li><a href="https://www.ietf.org/rfc/rfc1928.txt" target="_blank" rel="external">SOCKS Protocol Version 5</a></li>
-<li><a href="https://www.kernel.org/doc/Documentation/networking/tuntap.txt" target="_blank" rel="external">tuntap</a></li>
-<li><a href="https://www.ietf.org/rfc/rfc1631.txt" target="_blank" rel="external">NAT</a></li>
-<li><a href="http://developer.android.com/reference/android/net/VpnService.html" target="_blank" rel="external">Android VpnService</a></li>
-<li><a href="https://developer.apple.com/videos/wwdc/2015/?id=717" target="_blank" rel="external">Network Extension</a></li>
-</ul>
-</li>
-<li><p>Cryptography</p>
-<ul>
-<li><a href="http://online.stanford.edu/course/cryptography" target="_blank" rel="external">Cryptography</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation" target="_blank" rel="external">Block cipher mode of operation</a></li>
-<li><a href="https://github.com/jedisct1/libsodium" target="_blank" rel="external">libsodium</a> - A modern and easy-to-use crypto library.</li>
-<li><a href="https://www.openssl.org/" target="_blank" rel="external">OpenSSL</a></li>
-<li><a href="https://developer.apple.com/library/mac/documentation/Security/Conceptual/cryptoservices/GeneralPurposeCrypto/GeneralPurposeCrypto.html#//apple_ref/doc/uid/TP40011172-CH9-SW1" target="_blank" rel="external">Common Crypto</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="License">License</h2><p><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external">CC BY 4.0</a></p>
+    <title><![CDATA[常用git命令]]></title>
+    <link href="http://www.azber.com/2015/git/git_commands/"/>
+    <id>http://www.azber.com/2015/git/git_commands/</id>
+    <published>2015-09-01T15:49:19.137Z</published>
+    <updated>2015-09-01T15:49:19.137Z</updated>
+    <content type="html"><![CDATA[<h5 id="创建和使用git_ssh_key">创建和使用git ssh key</h5><p>首先设置git的user name和email：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span></span><br><span class="line">git config --global user.email <span class="string">"xxx@gmail.com"</span></span><br></pre></td></tr></table></figure></p>
+<p>查看git配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></p>
+<h5 id="生成SHH密匙：">生成SHH密匙：</h5><p>查看是否已经有了ssh密钥：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure></p>
+<p>如果没有密钥则不会有此文件夹，有则备份删除<br>生存密钥：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"xxx@gmail.com"</span></span><br></pre></td></tr></table></figure></p>
+<p>按3个回车，密码为空这里一般不使用密钥。<br>最后得到了两个文件：id_rsa和id_rsa.pub</p>
+<p>注意：密匙生成就不要改了，如果已经生成到~/.ssh文件夹下去找。</p>
+<h5 id="git变更项目地址">git变更项目地址</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="built_in">set</span>-url origin git@azber.com:res_dev_group/test.git</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+<h5 id="查看某个文件的修改历史">查看某个文件的修改历史</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --pretty=oneline 文件名 <span class="comment"># 显示修改历史</span></span><br><span class="line">git show <span class="number">356</span>f6def9d3fb7f3b9032ff5aa4b9110d4cca87e <span class="comment"># 查看更改</span></span><br></pre></td></tr></table></figure>
+<h5 id="git_push_时报错_warning:_push-default_is_unset;">git push 时报错 warning: push.default is unset;</h5><p>‘matching’参数是 Git 1.x 的默认行为，其意是如果你执行 git push 但没有指定分支，它将 push 所有你本地的分支到远程仓库中对应匹配的分支。而 Git 2.x 默认的是 simple，意味着执行 git push 没有指定分支时，只有当前分支会被 push 到你使用 git pull 获取的代码。</p>
+<p>根据提示，修改git push的行为:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global push.default matching</span><br></pre></td></tr></table></figure></p>
+<h5 id="git_submodule的使用拉子项目代码">git submodule的使用拉子项目代码</h5><p>开发过程中，经常会有一些通用的部分希望抽取出来做成一个公共库来提供给别的工程来使用，而公共代码库的版本管理是个麻烦的事情。今天无意中发现了git的git submodule命令，之前的问题迎刃而解了。</p>
+<h6 id="1-添加">1.添加</h6><p>为当前工程添加submodule，命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add 仓库地址 路径</span><br></pre></td></tr></table></figure></p>
+<p>其中，仓库地址是指子模块仓库地址，路径指将子模块放置在当前工程下的路径。</p>
+<p>注意：路径不能以 / 结尾（会造成修改不生效）、不能是现有工程已有的目录（不能順利 Clone）</p>
+<p>命令执行完成，会在当前工程根路径下生成一个名为“.gitmodules”的文件，其中记录了子模块的信息。添加完成以后，再将子模块所在的文件夹添加到工程中即可。</p>
+<h6 id="2-删除">2.删除</h6><p>submodule的删除稍微麻烦点：首先，要在“.gitmodules”文件中删除相应配置信息。然后，执行git rm –cached命令将子模块所在的文件从git中删除。</p>
+<p>下载的工程带有submodule</p>
+<p>当使用git clone下来的工程中带有submodule时，初始的时候，submodule的内容并不会自动下载下来的，此时，只需执行如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure></p>
+<p>即可将子模块内容下载下来后工程才不会缺少相应的文件。</p>
+<h5 id="git_add文件取消">git add文件取消</h5><p>在git的一般使用中，如果发现错误的将不想提交的文件add进入index之后，想回退取消，则可以使用命令： <code>git reset HEAD &lt;file&gt;…</code>，同时git add完毕之后，git也会做相应的提示。</p>
+<p><a href="http://blog.csdn.net/yaoming168/article/details/38777763" target="_blank" rel="external">http://blog.csdn.net/yaoming168/article/details/38777763</a></p>
+<h5 id="git删除文件：">git删除文件：</h5><p>删除文件跟踪并且删除文件系统中的文件file1<code>git rm file1</code></p>
+<p>提交刚才的删除动作，之后git不再管理该文件<code>git commit</code></p>
+<p>删除文件跟踪但不删除文件系统中的文件file1<code>git rm –cached file1</code></p>
+<p>提交刚才的删除动作，之后git不再管理该文件。但是文件系统中还是有file1。<code>git commit</code></p>
+<h5 id="版本回退">版本回退</h5><p>版本回退用于线上系统出现问题后恢复旧版本的操作。</p>
+<p>回退到的版本<code>git reset –hard 248cba8e77231601d1189e3576dc096c8986ae5</code></p>
+<p>回退的是所有文件，如果后悔回退可以<code>git pull</code>就可以了。</p>
+<h5 id="历史版本对比">历史版本对比</h5><p>查看日志<code>git log</code></p>
+<p>查看某一历史版本的提交内容<code>git show 4ebd4bbc3ed321d01484a4ed206f18ce2ebde5ca</code>，这里能看到版本的详细修改代码。</p>
+<p>对比不同版本<code>git diff c0f28a2ec490236caa13dec0e8ea826583b49b7a 2e476412c34a63b213b735e5a6d90cd05b014c33</code></p>
+<p><a href="http://blog.csdn.net/lxlzhn/article/details/9356473" target="_blank" rel="external">http://blog.csdn.net/lxlzhn/article/details/9356473</a></p>
+<h5 id="分支的意义与管理">分支的意义与管理</h5><p>创建分支可以避免提交代码后对主分支的影响，同时也使你有了相对独立的开发环境。分支具有很重要的意义。</p>
+<p>创建并切换分支，提交代码后才能在其它机器拉分支代码git checkout -b new_branch</p>
+<p>查看当前分支<code>git branch</code></p>
+<p>切换到master分支<code>git checkout master</code></p>
+<p>合并分支到当前分支<code>git merge new_branch</code>，合并分支的操作是从new_branch合并到master分支，当前环境在master分支。</p>
+<p>删除分支<code>git branch -d new_branch</code></p>
+<h5 id="git冲突文件编辑">git冲突文件编辑</h5><p>冲突文件冲突的地方如下面这样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a123</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">b789</span><br><span class="line">=======</span><br><span class="line">b45678910</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; <span class="number">6853e5f</span>f961e684d3a6c02d4d06183b5ff330dcc</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+<p>冲突标记&lt;&lt;&lt;&lt;&lt;&lt;&lt; （7个&lt;）与=======之间的内容是我的修改，=======与&gt;&gt;&gt;&gt;&gt;&gt;&gt;之间的内容是别人的修改。</p>
+<p>此时，还没有任何其它垃圾文件产生。</p>
+<p>你需要把代码合并好后重新走一遍代码提交流程就好了。</p>
+<h5 id="不顺利的代码提交流程">不顺利的代码提交流程</h5><p>在<code>git push</code>后出现错误可能是因为其他人提交了代码，而使你的本地代码库版本不是最新。</p>
+<p>这时你需要先<code>git pull</code>代码后，检查是否有文件冲突。</p>
+<p>没有文件冲突的话需要重新走一遍代码提交流程add —&gt; commit —&gt; push。</p>
+<p>解决文件冲突在后面说。</p>
+<h5 id="git顺利的提交代码流程">git顺利的提交代码流程</h5><p>查看修改的文件<code>git status</code>；</p>
+<p>为了谨慎检查一下代码<code>git diff</code>；</p>
+<p>添加修改的文件<code>git add dirname1/filename1.py dirname2/filenam2.py</code>，新加的文件也是直接add就好了；</p>
+<p>添加修改的日志<code>git commit -m</code> “fixed:修改了上传文件的逻辑”；</p>
+<p>提交代码<code>git push</code>，如果提交失败的可能原因是本地代码库版本不是最新。</p>
+<h5 id="理解github的pull_request">理解github的pull request</h5><blockquote>
+<p>有一个仓库，叫Repo A。你如果要往里贡献代码，首先要Fork这个Repo，于是在你的Github账号下有了一个Repo A2,。然后你在这个A2下工作，Commit，push等。然后你希望原始仓库Repo A合并你的工作，你可以在Github上发起一个Pull Request，意思是请求Repo A的所有者从你的A2合并分支。如果被审核通过并正式合并，这样你就为项目A做贡献了。<br>并，这样你就为项目A做贡献了。</p>
+</blockquote>
+<p><a href="http://zhidao.baidu.com/question/1669154493305991627.html" target="_blank" rel="external">http://zhidao.baidu.com/question/1669154493305991627.html</a></p>
+<h5 id="一些错误处理">一些错误处理</h5><p>“pathspec ‘branch’ did not match any file(s) known to git.”错误</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git pull</span><br><span class="line">git checkout new_branch</span><br></pre></td></tr></table></figure>
+<p>使用git提交比较大的文件的时候可能会出现这个错误</p>
+<blockquote>
+<p>error: RPC failed; result=22, HTTP code = 411<br>fatal: The remote end hung up unexpectedly<br>fatal: The remote end hung up unexpectedly<br>Everything up-to-date</p>
+</blockquote>
+<p>这样的话首先改一下git的传输字节限制<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config http.postBuffer <span class="number">524288000</span></span><br></pre></td></tr></table></figure></p>
+<p>然后这时候在传输或许会出现另一个错误</p>
+<blockquote>
+<p>error: RPC failed; result=22, HTTP code = 413<br>fatal: The remote end hung up unexpectedly<br>fatal: The remote end hung up unexpectedly<br>Everything up-to-date</p>
+</blockquote>
+<p>这两个错误看上去相似，一个是411，一个是413</p>
+<p>下面这个错误添加一下密钥就可以了</p>
+<p>首先key-keygen 生成密钥</p>
+<p>然后把生成的密钥复制到git中自己的账号下的相应位置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push ssh:</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="Awesome_Networking">Awesome Networking</h1><p>A curated list of awesome networking libraries, resources and shiny things.</p>
+    <![CDATA[<h5 id="创建和使用git_ssh_key">创建和使用git ssh key</h5><p>首先设置git的user name和email：<br><figure class="highlight bash"><table><tr><td class="gutter"><]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.azber.com/2015/git/Getting_Started/About_Version_Control/"/>
+    <id>http://www.azber.com/2015/git/Getting_Started/About_Version_Control/</id>
+    <published>2015-09-01T15:24:56.751Z</published>
+    <updated>2015-09-01T15:21:19.215Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[git-scm]]></title>
+    <link href="http://www.azber.com/2015/git/git_directory/"/>
+    <id>http://www.azber.com/2015/git/git_directory/</id>
+    <published>2015-09-01T15:20:10.890Z</published>
+    <updated>2015-09-01T15:20:10.890Z</updated>
+    <content type="html"><![CDATA[<h1 id="Book">Book</h1><p>The entire Pro Git book, written by Scott Chacon and Ben Straub and published by Apress, is available here.All content is licensed under the Creative Commons Attribution Non Commercial Share Alike  * 3.0 license.Print versions of the book are available on Amazon.com.</p>
 <ul>
-<]]>
+<li>1.起步<ul>
+<li>1.1 关于版本控制</li>
+<li>1.2 Git 简史</li>
+<li>1.3 Git 基础</li>
+<li>1.4 命令行</li>
+<li>1.5 安装 Git</li>
+<li>1.6 初次运行 Git 前的配置</li>
+<li>1.7 获取帮助</li>
+<li>1.8 总结</li>
+</ul>
+</li>
+<li>2.Git 基础<ul>
+<li>2.1 获取 Git 仓库</li>
+<li>2.2 记录每次更新到仓库</li>
+<li>2.3 查看提交历史</li>
+<li>2.4 撤消操作</li>
+<li>2.5 远程仓库的使用</li>
+<li>2.6 打标签</li>
+<li>2.7 Git 别名</li>
+<li>2.8 总结</li>
+</ul>
+</li>
+<li>3.Git 分支<ul>
+<li>3.1 分支简介</li>
+<li>3.2 分支的新建与合并</li>
+<li>3.3 分支管理</li>
+<li>3.4 分支开发工作流</li>
+<li>3.5 远程分支</li>
+<li>3.6 变基</li>
+<li>3.7 总结</li>
+</ul>
+</li>
+<li>4.服务器上的 Git<ul>
+<li>4.1 协议</li>
+<li>4.2 在服务器上搭建 Git</li>
+<li>4.3 生成 SSH 公钥</li>
+<li>4.4 配置服务器</li>
+<li>4.5 Git 守护进程</li>
+<li>4.6 Smart HTTP</li>
+<li>4.7 GitWeb</li>
+<li>4.8 GitLab</li>
+<li>4.9 第三方托管的选择</li>
+<li>4.10 总结</li>
+</ul>
+</li>
+<li>5.分布式 Git<ul>
+<li>5.1 分布式工作流程</li>
+<li>5.2 向一个项目贡献</li>
+<li>5.3 维护项目</li>
+<li>5.4 总结</li>
+<li>6.GitHub</li>
+<li>6.1 账户的创建和配置</li>
+<li>6.2 对项目做出贡献</li>
+<li>6.3 维护项目</li>
+<li>6.4 管理组织</li>
+<li>6.5 脚本 GitHub</li>
+<li>6.6 总结</li>
+<li>7.Git 工具</li>
+<li>7.1 选择修订版本</li>
+<li>7.2 交互式暂存</li>
+<li>7.3 储藏与清理</li>
+<li>7.4 签署工作</li>
+<li>7.5 搜索</li>
+<li>7.6 重写历史</li>
+<li>7.7 重置揭密</li>
+<li>7.8 高级合并</li>
+<li>7.9 Rerere</li>
+<li>7.10 使用 Git 调试</li>
+<li>7.11 子模块</li>
+<li>7.12 打包</li>
+<li>7.13 替换</li>
+<li>7.14 凭证存储</li>
+<li>7.15 总结</li>
+</ul>
+</li>
+<li>8.自定义 Git<ul>
+<li>8.1 配置 Git</li>
+<li>8.2 Git 属性</li>
+<li>8.3 Git 钩子</li>
+<li>8.4 使用强制策略的一个例子</li>
+<li>8.5 总结</li>
+</ul>
+</li>
+<li>9.Git 与其他系统<ul>
+<li>9.1 作为客户端的 Git</li>
+<li>9.2 迁移到 Git</li>
+<li>9.3 总结</li>
+</ul>
+</li>
+<li>10.Git 内部原理<ul>
+<li>10.1 底层命令和高层命令</li>
+<li>10.2 Git 对象</li>
+<li>10.3 Git 引用</li>
+<li>10.4 包文件</li>
+<li>10.5 引用规格</li>
+<li>10.6 传输协议</li>
+<li>10.7 维护与数据恢复</li>
+<li>10.8 环境变量</li>
+<li>10.9 总结</li>
+</ul>
+</li>
+<li>A1.其它环境中的 Git<ul>
+<li>A1.1 图形界面</li>
+<li>A1.2 Visual Studio 中的 Git</li>
+<li>A1.3 Eclipse 中的 Git</li>
+<li>A1.4 Bash 中的 Git</li>
+<li>A1.5 Zsh 中的 Git</li>
+<li>A1.6 Powershell 中的 Git</li>
+<li>A1.7 总结</li>
+</ul>
+</li>
+<li>A2.将 Git 嵌入你的应用<ul>
+<li>A2.1 命令行 Git 方式</li>
+<li>A2.2 Libgit2</li>
+<li>A2.3 JGit</li>
+</ul>
+</li>
+<li>A3.Git 命令<ul>
+<li>A3.1 设置与配置</li>
+<li>A3.2 获取与创建项目</li>
+<li>A3.3 快照基础</li>
+<li>A3.4 分支与合并</li>
+<li>A3.5 项目分享与更新</li>
+<li>A3.6 检查与比较</li>
+<li>A3.7 调试</li>
+<li>A3.8 补丁</li>
+<li>A3.9 邮件</li>
+<li>A3.10 外部系统</li>
+<li>A3.11 管理</li>
+<li>A3.12 底层命令</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Book">Book</h1><p>The entire Pro Git book, written by Scott Chacon and Ben Straub and published by Apress, is available here.All con]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo系列教程：（一）hexo介绍]]></title>
+    <link href="http://www.azber.com/2015/hexo-guide-1/"/>
+    <id>http://www.azber.com/2015/hexo-guide-1/</id>
+    <published>2015-09-01T14:50:36.692Z</published>
+    <updated>2015-09-01T14:50:36.692Z</updated>
+    <content type="html"><![CDATA[<h1 id="hexo系列教程：（一）hexo介绍">hexo系列教程：（一）hexo介绍</h1><h2 id="什么是hexo">什么是hexo</h2><p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的@tommy351。引用@tommy351的话，hexo：</p>
+<blockquote>
+<p><br>快速、简单且功能强大的 Node.js 博客框架。<br><br>A fast, simple &amp; powerful blog framework, powered by Node.js.<br><br></p>
+</blockquote>
+<p>类似于jekyll、Octopress、Wordpress，我们可以用<a href="http://zespia.tw/hexo/zh-CN/" target="_blank" rel="external">hexo</a>创建自己的博客，托管到github或Heroku上，绑定自己的域名，用markdown写文章。<a href="http://www.azber.com">本博客</a>即使用hexo创建并托管在github上。</p>
+<h2 id="为什么要用hexo">为什么要用hexo</h2><p>还是引用下作者的话：</p>
+<blockquote>
+<p><br>不可思议的快速 ─ 只要一眨眼静态文件即生成完成<br>支持 Markdown<br>仅需一道指令即可部署到 GitHub Pages 和 Heroku<br>已移植 Octopress 插件<br>高扩展性、自订性<br>兼容于 Windows, Mac &amp; Linux<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="hexo系列教程：（一）hexo介绍">hexo系列教程：（一）hexo介绍</h1><h2 id="什么是hexo">什么是hexo</h2><p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来]]>
     </summary>
     
   </entry>
@@ -78,8 +285,8 @@
     <title><![CDATA[Hello World]]></title>
     <link href="http://www.azber.com/2015/hello-world/"/>
     <id>http://www.azber.com/2015/hello-world/</id>
-    <published>2015-08-31T15:16:30.205Z</published>
-    <updated>2015-08-31T15:16:30.205Z</updated>
+    <published>2015-09-01T14:48:18.140Z</published>
+    <updated>2015-09-01T14:48:18.140Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
